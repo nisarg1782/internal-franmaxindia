@@ -1,0 +1,77 @@
+/* src/components/design/BannerCarousel.css */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 500px;
+  /* Added to ensure image fits without scrolling vertically */
+  min-height: 150px;
+}
+
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* New CSS for the clickable link and image */
+.banner-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer; /* ✅ Indicates the banner is clickable */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ Use 'cover' to fill the space and prevent scrolling */
+  display: block;
+}
+
+/* Caption styling */
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 2;
+  text-align: center;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,693 @@
+  /* Header */
+  .main-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    flex-wrap: wrap;
+  }
+
+  .top-left img {
+    height: 70px;
+    background-color: transparent;
+    /* or simply remove this line */
+  }
+
+
+  .top-center {
+    flex: 1;
+    text-align: center;
+  }
+
+  .top-center h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+    color: #f5842c;
+  }
+
+  .top-center span {
+    color: #f5842c;
+  }
+
+  .top-right a {
+    margin-left: 15px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .top-right a:hover {
+    background-color: whitesmoke;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #060644;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Left Section */
+  .nav-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* don’t force wrapping */
+    overflow-x: visible;
+    /* allow horizontal scroll on small screens */
+    -webkit-overflow-scrolling: touch;
+    /* smooth scroll on mobile */
+  }
+
+  .nav-left a {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: #fff;
+    white-space: nowrap;
+    /* keep text on one line */
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .nav-left a:hover {
+    color: #f5842c;
+  }
+
+  .nav-left a.active {
+    background-color: #44406e;
+    color: #fff;
+  }
+
+  .nav-left::-webkit-scrollbar {
+    display: none;
+    /* hide scroll bar but keep scrolling */
+  }
+
+  /* Home Icon */
+  .nav-icon {
+    font-size: 22px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-icon:hover,
+  .nav-icon.active {
+    background-color: #060644;
+    color: #fff;
+  }
+
+  /* Right Section (Search Icon) */
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-search-icon {
+    cursor: pointer;
+    font-size: 22px;
+    color: #000;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-search-icon:hover {
+    background-color: #060644;
+    color: #fff;
+  }
+
+  /* Tab Filter Modal Styles */
+  .search-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .search-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 95%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* =============================
+    Responsive Tweaks
+  ============================= */
+  @media (max-width: 768px) {
+    .main-header {
+      position: static;
+    }
+
+    .nav-left {
+
+      flex-wrap: wrap;
+      /* instead of scrolling, wrap into 2+ rows */
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    .nav-left a,
+    .nav-left .dropdown-trigger {
+      font-size: 14px;
+      /* slightly smaller text */
+      padding: 5px 8px;
+    }
+  }
+
+
+  /* Tab Filter Box */
+  .tab-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Tabs */
+  .tab-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    background-color: #eee;
+    color: #333;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .tab:hover {
+    background-color: #ddd;
+  }
+
+  .tab.active {
+    background-color: #060644;
+    color: white;
+  }
+
+  /* Tab Content */
+  .tab-content {
+    width: 100%;
+  }
+
+  /* Filter Row */
+  .filter-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .filter-row>div {
+    min-width: 200px;
+  }
+
+  .search-btn {
+    padding: 10px 16px;
+    background-color: #ddd;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    /* prevents breaking in small widths */
+    height: 40px;
+    /* matches react-select height */
+    margin-top: 0;
+    /* ensures alignment */
+  }
+
+  .filter-row select,
+  .filter-row input {
+    padding: 10px 12px;
+    min-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  /* Search Button */
+
+  .search-btn:hover {
+    background-color: #060644;
+  }
+
+  .hamburger-icon {
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .hamburger-icon:hover {
+    background-color: #060644;
+    color: #f5842c;
+  }
+
+  .top-right .top-link-button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-family: inherit;
+    transition: color 0.2s ease;
+  }
+
+  .top-right .top-link-button:hover {
+    background-color: #060644;
+    color: #f5842c;
+  }
+
+  .services-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-trigger {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 10px;
+    color: #333;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    min-width: 180px;
+    padding: 8px 0;
+    z-index: 999;
+  }
+
+  .dropdown-item {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+
+  /* ================================================= */
+  /* Navbar & Dropdown Styling                         */
+  /* ================================================= */
+
+  /* General Navbar links */
+  .nav-left a {
+    padding: 8px 10px;
+    text-decoration: none;
+
+    color: #fff;
+  }
+
+  /* Services Dropdown Wrapper */
+  .services-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* The clickable trigger for the dropdown */
+  .dropdown-trigger {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 10px;
+    color: #fff;
+    display: flex;
+    /* Aligns the icon with the text */
+    align-items: center;
+  }
+
+  /* The main dropdown menu container */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Position below the trigger */
+    left: 0;
+    margin-top: 5px;
+    /* Add a small gap between trigger and menu */
+    background: #060644;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    /* Increased min-width for better readability */
+    padding: 8px 0;
+    z-index: 1000;
+    /* Use a higher z-index for sub-menus */
+  }
+
+  /* Individual dropdown items (main links) */
+  .dropdown-item {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+
+    text-decoration: none;
+    white-space: nowrap;
+    /* Prevents text wrapping for better alignment */
+    transition: background 0.2s ease, color 0.2s ease;
+
+  }
+
+  /* Hover and focus states for dropdown items */
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+
+  /* Submenu container (for nested items like "Consulting") */
+  .dropdown-item-has-submenu {
+    position: relative;
+    color: black
+  }
+
+  /* Styling for the nested submenu */
+  .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Positions the submenu to the right of its parent */
+    margin-left: 5px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    /* Ensure sub-menu is wide enough for long text */
+    padding: 8px 0;
+    z-index: 1010;
+    color: black;
+  }
+
+  /* Styling for items inside the submenu */
+  .submenu-item {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    /* **FIX for Long Text** */
+    /* This will truncate the text with an ellipsis (...) if it's too long */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hover and focus states for submenu items */
+  .submenu-item:hover,
+  .submenu-item:focus {
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+
+  /* ================================================= */
+  /* Other Navbar styles (from your original code)   */
+  /* ================================================= */
+  .top-right .top-link-button:hover {
+    color: white;
+  }
+
+
+  /* =============================
+   Default Styles (Desktop-first)
+   ============================= */
+
+  /* Your original CSS code here... (unchanged) */
+
+
+  /* =============================
+   Extra Small Devices (phones)
+   320px – 480px
+   ============================= */
+  @media (max-width: 480px) {
+    .main-header {
+      position: static;
+      /* remove sticky for mobile */
+    }
+
+    .top-bar {
+      padding: 8px 12px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+
+    .top-left img {
+      height: 50px;
+    }
+
+    .top-center h2 {
+      font-size: 16px;
+    }
+
+    .top-right a,
+    .top-right .top-link-button {
+      font-size: 14px;
+      margin-left: 8px;
+    }
+
+    .navbar {
+      padding: 6px 8px;
+    }
+
+    .nav-left {
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+
+    }
+
+    .nav-left a {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+
+    .nav-icon,
+    .nav-search-icon {
+      font-size: 16px;
+      padding: 4px;
+    }
+
+    .hamburger-icon {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+
+
+  /* =============================
+   Small Devices (big phones)
+   481px – 767px
+   ============================= */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .main-header {
+      position: static;
+    }
+
+    .top-bar {
+      padding: 10px 15px;
+      gap: 10px;
+    }
+
+    .top-left img {
+      height: 60px;
+    }
+
+    .top-center h2 {
+      font-size: 18px;
+    }
+
+    .top-right a,
+    .top-right .top-link-button {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .nav-left {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-left a {
+      font-size: 13px;
+      padding: 5px 8px;
+    }
+  }
+
+
+  /* =============================
+   Medium Devices (tablets)
+   768px – 1023px
+   ============================= */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .main-header {
+      position: static;
+      /* tablets also no sticky */
+    }
+
+    .top-bar {
+      padding: 12px 20px;
+    }
+
+    .top-left img {
+      height: 65px;
+    }
+
+    .top-center h2 {
+      font-size: 19px;
+    }
+
+    .nav-left {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-left a {
+      font-size: 14px;
+    }
+
+    .nav-icon,
+    .nav-search-icon {
+      font-size: 18px;
+    }
+  }
+
+
+  /* =============================
+   Large Devices (laptops)
+   1024px – 1439px
+   ============================= */
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .main-header {
+      position: sticky;
+      /* enable sticky */
+    }
+
+    .top-bar {
+      padding: 12px 25px;
+    }
+
+    .top-left img {
+      height: 70px;
+    }
+
+    .top-center h2 {
+      font-size: 20px;
+    }
+
+    .nav-left a {
+      font-size: 15px;
+    }
+  }
+
+
+  /* =============================
+   Extra Large Devices (desktops, TVs)
+   1440px +
+   ============================= */
+  @media (min-width: 1440px) {
+    .main-header {
+      position: sticky;
+    }
+
+    .top-bar {
+      padding: 15px 40px;
+    }
+
+    .top-left img {
+      height: 80px;
+    }
+
+    .top-center h2 {
+      font-size: 22px;
+    }
+
+    .top-right a,
+    .top-right .top-link-button {
+      font-size: 22px;
+    }
+
+    .nav-left {
+      gap: 24px;
+    }
+
+    .nav-left a {
+      font-size: 16px;
+    }
+
+    .nav-icon,
+    .nav-search-icon {
+      font-size: 24px;
+    }
+  }

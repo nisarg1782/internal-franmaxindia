@@ -1,0 +1,198 @@
+/* src/components/design/TopRetailBrands.css */
+
+.retail-br-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.retail-br-heading {
+  text-align: center;
+  font-size: 28px;
+  color: #060644;
+  margin-bottom: 40px;
+}
+
+.retail-br-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.retail-br-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.retail-br-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px #060644;
+}
+
+.retail-br-img-wrap {
+  width: 100%;
+  height: 150px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.retail-br-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.retail-br-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.retail-br-info h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.retail-br-info p {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.retail-br-sector {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.retail-br-details {
+  margin: 12px 0;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.retail-br-details p {
+  font-size: 14px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.retail-br-btn {
+  margin: 10px auto 15px;
+  background: #fff;
+  border: 1px solid #060644;
+  color: #f5842c;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: block;
+}
+
+.retail-br-btn:hover {
+  background: #060644;
+  color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .retail-br-card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .retail-br-card {
+    width: 45%;
+  }
+
+  .retail-br-info h3 {
+    font-size: 16px;
+  }
+
+  .retail-br-info p,
+  .retail-br-details p {
+    font-size: 13px;
+  }
+
+  .retail-br-btn {
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .retail-br-heading {
+    font-size: 22px;
+  }
+
+  .retail-br-card {
+    width: 100%;
+  }
+
+  .retail-br-info h3 {
+    font-size: 15px;
+  }
+
+  .retail-br-info p,
+  .retail-br-details p {
+    font-size: 13px;
+  }
+
+  .retail-br-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .retail-br-wrapper {
+    padding: 40px 15px;
+  }
+
+  .retail-br-info h3 {
+    font-size: 14px;
+  }
+
+  .retail-br-info p,
+  .retail-br-details p {
+    font-size: 12px;
+  }
+
+  .retail-br-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .retail-br-info h3 {
+    font-size: 13px;
+  }
+
+  .retail-br-info p,
+  .retail-br-details p {
+    font-size: 11px;
+  }
+
+  .retail-br-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}

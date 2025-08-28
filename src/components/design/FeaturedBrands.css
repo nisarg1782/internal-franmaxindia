@@ -1,0 +1,205 @@
+/* Wrapper */
+.tfb-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+/* Heading */
+.tfb-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #060644;
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.tfb-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card */
+.tfb-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tfb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image section */
+.tfb-img-wrap {
+  height: 150px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tfb-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Info Section */
+.tfb-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.tfb-sector {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.tfb-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #060644;
+  margin: 10px 0 8px;
+}
+
+/* Details */
+.tfb-details {
+  margin: 12px 0;
+  padding: 0 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tfb-details p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.tfb-details span {
+  font-weight: 500;
+}
+
+/* Button */
+.tfb-btn {
+  margin: 10px auto 16px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #f97316;
+  color: #f97316;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tfb-btn:hover {
+  background: #f97316;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tfb-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tfb-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tfb-card {
+    width: 100%;
+  }
+
+  .tfb-title {
+    font-size: 16px;
+  }
+
+  .tfb-details p {
+    font-size: 13px;
+  }
+
+  .tfb-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tfb-title {
+    font-size: 14px;
+  }
+
+  .tfb-details p {
+    font-size: 12px;
+  }
+
+  .tfb-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tfb-title {
+    font-size: 13px;
+  }
+
+  .tfb-details p {
+    font-size: 11px;
+  }
+
+  .tfb-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
+.freelisting-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.freelisting-heading {
+  font-size: 28px;
+  color: #060644;
+  font-weight: 700;
+}
+
+.freelisting-view-all {
+  font-size: 15px;
+  color: #f97316;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.freelisting-view-all:hover {
+  color: #d6551a;
+}

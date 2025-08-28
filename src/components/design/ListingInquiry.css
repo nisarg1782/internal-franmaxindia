@@ -1,0 +1,139 @@
+/* Container for the entire form to be placed in the sidebar */
+.enquiry-form-container {
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading style */
+.enquiry-form-container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* The form itself */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Wrapper for each input field and its icon */
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styling for the icons */
+.input-icon svg {
+  position: absolute;
+  left: 1rem;
+  color: #7f8c8d;
+  font-size: 1rem;
+  z-index: 10;
+}
+
+/* Common styling for all input fields and textarea */
+.input-icon input,
+.input-icon textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem; /* Left padding for the icon */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #34495e;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Specific styling for the textarea */
+.input-icon textarea {
+  padding-left: 3rem;
+  resize: vertical;
+}
+
+/* Focus state for inputs and textarea */
+.input-icon input:focus,
+.input-icon textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Styling for the react-select component to match the inputs */
+.input-icon .react-select__control {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.25rem 1rem 0.25rem 2.25rem; /* Padding for select input to align */
+  background-color: #fff;
+  font-size: 0.9rem;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.input-icon .react-select__control--is-focused {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* Menu styling for react-select */
+.input-icon .react-select__menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+ 
+}
+
+.input-icon .react-select__option {
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.input-icon .react-select__option--is-focused {
+  background-color: #ecf0f1;
+}
+
+.input-icon .react-select__option--is-selected {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Placeholder color for all inputs */
+::placeholder {
+  color: #95a5a6;
+}
+
+/* Submit button styling */
+.submit-btn {
+  width: 100%;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #27ae60;
+}
+
+.submit-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}

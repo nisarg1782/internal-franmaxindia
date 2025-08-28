@@ -1,0 +1,204 @@
+/* src/components/design/FreeListingBrands.css */
+
+.freelisting-wrapper {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.freelisting-heading {
+  text-align: center;
+  font-size: 28px;
+  color: #060644;
+  margin-bottom: 40px;
+}
+
+.freelisting-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.freelisting-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.freelisting-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px #060644;
+}
+
+.freelisting-img-wrap {
+  width: 100%;
+  height: 150px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.freelisting-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.freelisting-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.freelisting-info h3 {
+  margin: 10px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.freelisting-info p {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.freelisting-sector {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.freelisting-details {
+  margin: 12px 0;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.freelisting-details p {
+  font-size: 14px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.freelisting-btn {
+  margin: 10px auto 15px;
+  background: #fff;
+  border: 1px solid #060644;
+  color: #f5842c;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: block;
+}
+
+.freelisting-btn:hover {
+  background: #060644;
+  color: #fff;
+}
+
+/* 🔁 Responsive Styling */
+
+/* Tablet Landscape and Small Laptops */
+@media (max-width: 1200px) {
+  .freelisting-card {
+    width: 30%;
+  }
+}
+
+/* Tablets Portrait and Medium Devices */
+@media (max-width: 992px) {
+  .freelisting-card {
+    width: 45%;
+  }
+
+  .freelisting-info h3 {
+    font-size: 16px;
+  }
+
+  .freelisting-info p,
+  .freelisting-details p {
+    font-size: 13px;
+  }
+
+  .freelisting-btn {
+    padding: 7px 14px;
+  }
+}
+
+/* Large Mobile Devices */
+@media (max-width: 768px) {
+  .freelisting-heading {
+    font-size: 22px;
+  }
+
+  .freelisting-card {
+    width: 100%;
+  }
+
+  .freelisting-info h3 {
+    font-size: 15px;
+  }
+
+  .freelisting-info p,
+  .freelisting-details p {
+    font-size: 13px;
+  }
+
+  .freelisting-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+  .freelisting-wrapper {
+    padding: 40px 15px;
+  }
+
+  .freelisting-info h3 {
+    font-size: 14px;
+  }
+
+  .freelisting-info p,
+  .freelisting-details p {
+    font-size: 12px;
+  }
+
+  .freelisting-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+  .freelisting-info h3 {
+    font-size: 13px;
+  }
+
+  .freelisting-info p,
+  .freelisting-details p {
+    font-size: 11px;
+  }
+
+  .freelisting-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}

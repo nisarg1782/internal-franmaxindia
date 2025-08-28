@@ -1,0 +1,265 @@
+.consulting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.consulting-heading {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-nav button {
+  padding: 12px 25px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.tab-nav button.active,
+.tab-nav button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab-content {
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.tab-content h2 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.tab-content p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.benefit-card {
+  flex: 1 1 250px;
+  background-color: #ecf0f1;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.work-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.work-list li {
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.enhanced-tab-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.tab-title {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.tab-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.tab-section {
+  margin-top: 30px;
+}
+
+.tab-subheading {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.enhanced-benefit-card {
+  display: flex;
+  align-items: center;
+  background: #f0f6ff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #2c3e50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex: 1 1 250px;
+}
+
+.benefit-icon {
+  color: #007bff;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Grid container */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+/* Individual work cards */
+.work-card {
+  background: #ffffff;
+  border: 2px solid #e0e6ff; /* subtle border accent */
+  padding: 28px 22px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.08);
+  transform: skewX(-25deg);
+  transition: all 0.5s;
+}
+
+.work-card:hover::before {
+  left: 125%;
+}
+
+/* Icon styling */
+.work-icon {
+  font-size: 44px;
+  color: #007bff;
+  margin-bottom: 18px;
+  transition: transform 0.4s, color 0.4s;
+}
+
+.work-card:hover .work-icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #0056b3;
+}
+
+/* Label styling */
+.work-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.work-card:hover .work-label {
+  color: #007bff;
+}
+
+/* Description styling */
+.work-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+
+.work-card:hover .work-desc {
+  color: #333;
+}
+
+/* Section heading */
+.tab-subheading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .work-grid {
+    gap: 20px;
+  }
+  .work-card {
+    padding: 20px;
+  }
+  .work-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+  .work-label {
+    font-size: 16px;
+  }
+  .work-desc {
+    font-size: 13px;
+  }
+}
+
+/* ================== Inquiry Button ================== */
+.inquiry-btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.inquiry-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.25);
+}
+
+.inquiry-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #00408a);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 86, 179, 0.35);
+}

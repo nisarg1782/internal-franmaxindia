@@ -1,0 +1,97 @@
+/* File: src/components/LeaseProperties.css */
+
+/* Main container for the entire page, enabling flex layout */
+.lease-properties-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff; /* White background */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: #374151; /* Darker text for readability on a light background */
+}
+
+/* Container for the main content area */
+.lease-properties-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Title styling */
+.lease-properties-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Wrapper for the table */
+.lease-properties-table-wrapper {
+  background-color: #f9fafb; /* bg-gray-50 */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+/* Table styling */
+.lease-properties-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lease-properties-table thead {
+  background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+.lease-properties-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lease-properties-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lease-properties-table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Details button styling */
+.details-toggle-button {
+  color: #4f46e5;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease-in-out;
+}
+
+.details-toggle-button:hover {
+  color: #6366f1;
+}
+
+/* Expanded row styling */
+.detailed-row {
+  background-color: #fefefe;
+  border-top: 2px solid #e5e7eb;
+}
+
+.detailed-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}

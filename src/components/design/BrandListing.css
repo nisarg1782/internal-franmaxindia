@@ -1,0 +1,286 @@
+/* General container */
+.listing-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Left section - brand cards */
+.tfb-wrapper {
+  flex: 1 1 65%;
+  min-width: 300px;
+}
+
+/* Right section - form */
+.form-wrapper {
+  flex: 1 1 30%;
+  margin-top: 150px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+/* Heading */
+.tfb-heading {
+  font-size: 28px;
+  color: #060644;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* Responsive grid layout */
+.tfb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Brand card */
+.tfb-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.tfb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Brand image */
+.brand-image-wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.brand-image-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Text info */
+.brand-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.brand-info {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Info rows (Investment, Area, Outlets) */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: #444;
+  word-break: break-word;
+}
+
+.info-row strong {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+}
+
+/* Know more button */
+.know-more {
+  background: none;
+  border: 1px solid #f26a1b;
+  color: #f26a1b;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.know-more:hover {
+  background: #f26a1b;
+  color: #fff;
+}
+
+/* Load more section */
+.load-more-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more-btn {
+  background-color: #f26a1b;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #d45608;
+}
+
+/* Enquiry form - input style */
+.input-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-icon input,
+.input-icon textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  font-size: 14px;
+}
+
+.input-icon textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Form submit button */
+.enquiry-form .submit-btn {
+  background-color: #f26a1b;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.enquiry-form .submit-btn:hover {
+  background-color: #d45608;
+}
+
+/* React-select compatibility */
+.input-icon .css-13cymwt-control,
+.input-icon .css-t3ipsp-control {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Select placeholder text */
+.input-icon .css-1dimb5e-singleValue {
+  color: #444;
+}
+
+/* Ensure dropdowns don’t get cut off */
+.css-1nmdiq5-menu {
+  z-index: 10;
+}
+
+/* === Media Queries === */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .form-wrapper {
+    margin-top: 60px;
+  }
+
+  .listing-page-wrapper {
+    max-width: 100%;
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .listing-page-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-wrapper,
+  .tfb-wrapper {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .tfb-heading {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .tfb-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .tfb-heading {
+    font-size: 20px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-info {
+    font-size: 13px;
+  }
+
+  .know-more {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-icon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

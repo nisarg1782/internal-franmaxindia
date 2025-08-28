@@ -1,0 +1,129 @@
+/* src/components/design/ContactUs.css */
+.contactus-wrapper {
+  background: #f4f8fc;
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contactus-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contactus-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contactus-info h2 {
+  font-size: 28px;
+  color: #060644;
+  margin-bottom: 10px;
+}
+
+.contactus-info .desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contactus-info .info-item {
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contactus-info .info-item svg {
+  color: #218838;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contactus-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contactus-form h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #060644;
+}
+
+.contactus-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactus-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contactus-form .form-field {
+  position: relative;
+  flex: 1;
+}
+
+.contactus-form .form-field.full-width {
+  flex: 1 1 100%;
+}
+
+.contactus-form input,
+.contactus-form textarea {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+  background: #fff;
+}
+
+.contactus-form .icon {
+  position: absolute;
+  top: 37%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+}
+
+.contactus-form button[type="submit"] {
+  background: #060644;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.contactus-form button[type="submit"]:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .contactus-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .contactus-form .form-row {
+    flex-direction: column;
+  }
+}

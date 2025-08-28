@@ -1,0 +1,167 @@
+/* Main container */
+.lease-page-container {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f0f6ff, #ffffff);
+  color: #222;
+  padding-bottom: 50px;
+}
+
+/* Header section */
+.lease-page-header {
+  background: linear-gradient(90deg, #0b2c61, #144a9f);
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.lease-page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.lease-page-header p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* Intro section */
+.lease-page-intro {
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.lease-page-intro h2 {
+  font-size: 24px;
+  color: #0b2c61;
+  margin-bottom: 10px;
+}
+
+.lease-page-intro p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Form section */
+.lease-form-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lease-form-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.lease-form-title {
+  text-align: center;
+  font-size: 22px;
+  color: #0b2c61;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Grid for form fields */
+.lease-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.lease-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.lease-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+  font-size: 14.5px;
+}
+
+.lease-form-group input,
+.lease-form-group select,
+.lease-form-group textarea {
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+.lease-form-group input:focus,
+.lease-form-group select:focus,
+.lease-form-group textarea:focus {
+  border-color: #0b2c61;
+  outline: none;
+}
+
+.lease-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio inputs */
+.lease-form-group div label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+/* Full width item */
+.lease-form-full {
+  grid-column: span 2;
+}
+
+/* Submit button */
+.lease-submit-button {
+  grid-column: span 2;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #0b2c61;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lease-submit-button:hover {
+  background-color: #092b57;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .lease-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lease-form-full,
+  .lease-submit-button {
+    grid-column: span 1;
+  }
+
+  .lease-form-card {
+    padding: 25px;
+  }
+
+  .lease-page-header h1 {
+    font-size: 26px;
+  }
+
+  .lease-page-intro h2 {
+    font-size: 20px;
+  }
+}

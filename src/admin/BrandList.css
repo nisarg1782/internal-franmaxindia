@@ -1,0 +1,527 @@
+/* BrandList.css */
+.brand-list-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.brand-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.status-msg {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+.status-msg.error {
+  color: red;
+}
+
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.brand-table th,
+.brand-table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.brand-table th {
+  background-color: #f6f8fa;
+  color: #2d2d2d;
+}
+
+.icon {
+  margin-right: 6px;
+  color: #3498db;
+}
+
+.status.active {
+  color: green;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status.inactive {
+  color: red;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/* BrandList.css */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+.brand-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.status-msg {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.status-msg.error {
+  color: red;
+}
+
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.brand-table th,
+.brand-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  text-align: left;
+}
+
+.brand-table th {
+  background-color: #f9fafc;
+  font-weight: 600;
+  color: #333;
+}
+
+.icon {
+  margin-right: 6px;
+  color: #3498db;
+}
+
+.status.active {
+  color: green;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.inactive {
+  color: red;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.brand-table th,
+.brand-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.brand-table th {
+  background: #f4f6f8;
+  color: #444;
+}
+
+.icon {
+  margin-right: 6px;
+  color: #3498db;
+}
+
+.status-msg {
+  font-size: 16px;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.status-msg.error {
+  color: red;
+}
+
+.save-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.save-btn:hover {
+  background-color: #27ae60;
+}
+
+select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.edit-btn,
+.cancel-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.edit-btn:hover {
+  background-color: #e67e22;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.brand-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.brand-table th,
+.brand-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.brand-table th {
+  background-color: #f0f0f0;
+}
+
+.status.active {
+  color: green;
+  font-weight: bold;
+}
+
+.status.inactive {
+  color: red;
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.save-btn,
+.cancel-btn,
+.edit-btn {
+  padding: 6px 12px;
+  margin-right: 5px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.status-msg {
+  padding: 10px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.status-msg.error {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.add-brand-btn {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+.modal input,
+.modal select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.modal-actions {
+  text-align: right;
+}
+
+.add-brand-btn {
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+}
+.modal input,
+.modal select {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 14px;
+}
+.modal-actions {
+  text-align: right;
+}
+.save-btn,
+.cancel-btn {
+  padding: 6px 12px;
+  margin-left: 8px;
+  font-size: 14px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.improved-modal {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .brand-table th,
+  .brand-table td {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+
+  .brand-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-table th,
+  .brand-table td {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+
+  .brand-title {
+    font-size: 22px;
+  }
+}

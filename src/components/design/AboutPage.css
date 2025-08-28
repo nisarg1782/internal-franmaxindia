@@ -1,0 +1,115 @@
+/* src/design/AboutPage.css */
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: #333;
+  perspective: 1000px; /* Enables 3D perspective for children */
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  transform: rotateX(0deg);
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.about-hero:hover {
+  transform: rotateX(3deg);
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  color: #0b3d91;
+  margin-bottom: 5px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateZ(10px);
+}
+
+.about-hero h2 {
+  font-size: 24px;
+  color: #555;
+  font-weight: 500;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-content section {
+  margin-bottom: 35px;
+  padding: 20px;
+  background: #f8f9ff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 100, 0.08);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.about-content section:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 100, 0.15);
+}
+
+.about-content section h3 {
+  color: #0b3d91;
+  font-size: 22px;
+  margin-bottom: 10px;
+  transform: translateZ(20px);
+}
+
+.about-content p {
+  font-size: 16px;
+  color: #444;
+  transform: translateZ(10px);
+}
+
+.highlight-section {
+  background: #eaf4ff;
+  border-left: 5px solid #0b3d91;
+  transform: rotateY(-1deg);
+}
+
+.final-cta {
+  background: #fff8e1;
+  border-left: 5px solid #ffc107;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.3);
+  transform: rotateX(1deg);
+  transition: transform 0.3s ease;
+}
+
+.final-cta:hover {
+  transform: scale(1.03) rotateX(0deg);
+}
+
+.final-cta p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px 10px;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-hero h2 {
+    font-size: 20px;
+  }
+
+  .about-content section {
+    transform: none;
+  }
+
+  .final-cta {
+    transform: none;
+  }
+}

@@ -1,0 +1,50 @@
+.hydration-page {
+  background-color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hydration-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hydration-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.hydration-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hydration-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hydration-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.hydration-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hydration-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+ 
+}

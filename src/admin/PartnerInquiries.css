@@ -1,0 +1,106 @@
+/* File: src/components/design/PartnerInquiries.css */
+
+/* Main Page Layout */
+.partner-inquiry-page {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* Content Area */
+.partner-inquiry-content {
+    flex-grow: 1;
+    padding: 2.5rem;
+    max-width: 100%;
+}
+
+.partner-inquiry-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+/* Table Wrapper for styling and overflow */
+.partner-inquiry-table-wrapper {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table Styling */
+.partner-inquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.partner-inquiry-table th,
+.partner-inquiry-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.partner-inquiry-table th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+}
+
+/* Table Body Rows */
+.partner-inquiry-overview-row {
+    transition: background-color 0.2s ease;
+}
+
+.partner-inquiry-overview-row:hover {
+    background-color: #f3f4f6;
+}
+
+/* View Details Button */
+.partner-inquiry-details-toggle button {
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.partner-inquiry-details-toggle button:hover {
+    background-color: #357bd8;
+}
+
+/* Detailed Row Styling */
+.partner-inquiry-detailed-row {
+    background-color: #fcfcfd;
+}
+
+.partner-inquiry-details-content {
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #4a90e2; /* Accent color to highlight the detailed view */
+    margin: 1rem 0;
+}
+
+.partner-inquiry-details-content p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.partner-inquiry-details-content strong {
+    color: #1f2937;
+}
+
+/* Message for no inquiries */
+.partner-inquiry-table tbody tr:last-child td[colspan="5"] {
+    padding: 2rem;
+    color: #6b7280;
+    font-style: italic;
+}

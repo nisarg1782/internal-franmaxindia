@@ -1,0 +1,200 @@
+/* File: src/components/Sidebar.css */
+.snbs-sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  height: 100vh;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  font-family: "Segoe UI", sans-serif;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.snbs-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.snbs-logo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #060644;
+}
+
+.snbs-role {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.snbs-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.snbs-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.snbs-section-header {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #555;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: #f8f9fc;
+  transition: background 0.2s ease;
+}
+
+.snbs-section-header:hover {
+  background: #eef3ff;
+}
+
+.snbs-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  color: #333;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  gap: 10px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.snbs-link:hover,
+.snbs-link.active {
+  background-color: #f0f4ff;
+  color: #007bff;
+}
+
+.snbs-link svg {
+  font-size: 1.1rem;
+}
+.snbs-sidebar {
+  width: 250px;
+  background: #ffffff;
+  height: 100vh;
+  border-right: 1px solid #eee;
+  padding: 20px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.snbs-sidebar.collapsed {
+  width: 70px;
+}
+
+.snbs-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.snbs-logo h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.snbs-role {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 4px 0 0;
+}
+
+.snbs-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.snbs-menu {
+  margin-top: 30px;
+}
+
+.snbs-section {
+  margin-bottom: 20px;
+}
+
+.snbs-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.snbs-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 4px 0;
+  transition: background 0.2s;
+}
+
+.snbs-link:hover {
+  background: #f5f5f5;
+}
+
+.snbs-sidebar.collapsed .snbs-section-header span,
+.snbs-sidebar.collapsed .snbs-link span,
+.snbs-sidebar.collapsed .snbs-role,
+.snbs-sidebar.collapsed .snbs-logo h2 {
+  display: none;
+}
+
+.snbs-sidebar.collapsed .snbs-link {
+  justify-content: center;
+}
+
+.snbs-sidebar.collapsed .snbs-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .snbs-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .snbs-logo {
+    margin-bottom: 20px;
+  }
+
+  .snbs-section-header {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .snbs-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,79 @@
+/* src/brand/FilterBar.css */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.filter-bar input[type="text"],
+.filter-bar input[type="date"],
+.filter-bar select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 200px;
+  transition: border 0.3s;
+  white-space: nowrap;
+}
+
+.filter-bar input[type="text"]::placeholder,
+.filter-bar input[type="date"]::placeholder {
+  color: #888;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Responsive Design */
+.reset-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.reset-btn:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 1024px) {
+  .filter-bar {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.enq-form-wrapper {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.enq-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.enq-form input,
+.enq-form select,
+.enq-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.enq-submit-btn {
+  background: #f26a1b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.enq-submit-btn:hover {
+  background: #d45608;
+}
+
+.enq-submit-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}

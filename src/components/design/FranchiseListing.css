@@ -1,0 +1,165 @@
+/* Main two-column layout */
+.franchise-listing-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 5%;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Left section for the brand cards */
+.franchise-listing-main {
+  flex: 3;
+}
+
+/* Right section for the form */
+/* .franchise-listing-sidebar {
+  flex: 1;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+} */
+
+/* Card grid for 3 cards per row */
+.franchise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual card styling (reusing from TopBrands.css for consistency) */
+.franchise-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.franchise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.franchise-card .franchise-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.franchise-card .franchise-img-wrap img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.franchise-card .franchise-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.franchise-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.franchise-card .franchise-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.franchise-card .franchise-detail .biz-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.franchise-card .biz-field .label {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.franchise-card .biz-field .value {
+  font-size: 0.95rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.franchise-card .franchise-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  margin-top: auto;
+}
+
+.franchise-card .franchise-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Load More button styling */
+.load-more-wrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.load-more-btn {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.load-more-btn:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .franchise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .franchise-listing-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .franchise-grid {
+    grid-template-columns: 1fr;
+  }
+  .franchise-listing-sidebar {
+    order: 1; /* Place form above cards on mobile */
+  }
+  .franchise-listing-main {
+    order: 2;
+  }
+}

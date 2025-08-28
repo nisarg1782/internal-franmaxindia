@@ -1,0 +1,43 @@
+/* File: dashboard.css */
+.snb-dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.snb-dashboard-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f4f6f8;
+}
+
+.snb-dashboard-main h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.snb-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.snb-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  text-align: center;
+}
+
+.snb-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.snb-card p {
+  font-size: 1.8rem;
+  color: #007bff;
+  font-weight: bold;
+}

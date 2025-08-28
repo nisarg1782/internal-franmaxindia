@@ -1,0 +1,567 @@
+/* design/EventPage.css */
+
+/* General form styles */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Increased gap for better spacing */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #060644; /* Use brand color for labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%; /* Ensure inputs take full width */
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f5842c; /* Use brand color for focus */
+    box-shadow: 0 0 0 3px rgba(245, 132, 44, 0.25);
+}
+
+/* Radio button group specific styles */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center; /* Vertically align items */
+    margin-top: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: #555;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.radio-group label:hover {
+    color: #f5842c; /* Change text color on hover */
+}
+
+/* Custom radio button appearance */
+.radio-group input[type="radio"] {
+    /* Hide the default radio button */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Inner circle for selected state */
+.radio-group input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: inset 1em 1em #f5842c; /* Use the brand orange color */
+    background-color: #f5842c; /* Ensure it works on some browsers */
+}
+
+/* Change appearance when checked */
+.radio-group input[type="radio"]:checked {
+    border-color: #f5842c;
+}
+
+.radio-group input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* Hover and focus states */
+.radio-group label:hover input[type="radio"] {
+    border-color: #f5842c;
+}
+
+.radio-group input[type="radio"]:focus-visible {
+    outline: 2px solid #f5842c;
+    outline-offset: 2px;
+}
+
+/* Existing CSS from the user's prompt */
+
+.franmax-page-container {
+    overflow: hidden;
+}
+
+/* Hero Section with Background Image */
+.hero-header-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://wallpapers.com/images/featured/corporate-event-g6myc8i808y8llhh.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    padding: 20px;
+    max-width: 960px;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-content .logo-section {
+    margin-bottom: 20px;
+}
+
+.hero-content .franmax-title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.hero-content .summit-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 10px 0 0;
+    color: #f5842c;
+}
+
+.hero-content .hero-tagline {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-content .event-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.hero-register-button {
+    background-color: #f5842c;
+    color: #060644;
+    padding: 18px 50px;
+    font-size: 1.3rem;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Content Sections */
+.content-section, .brands-section, .cta-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #060644;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #f5842c;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.benefit-card {
+    background: #f4f4f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-card h4 {
+    color: #060644;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Brands Section */
+.brands-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.brand-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.brand-list li {
+    background: #f4f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #f5842c;
+}
+
+.brands-note {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    background: #060644;
+    color: #fff;
+    padding: 60px 40px;
+    border-radius: 8px;
+}
+
+.cta-title {
+    color: #f5842c;
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.register-button {
+    display: inline-block;
+    background: #f5842c;
+    color: #060644;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.register-button:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Footer */
+
+/* Registration Modal */
+.registration-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to be on top of everything */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 600px;
+    position: relative;
+    max-height: 90vh; /* Allow modal to take up to 90% of the viewport height */
+    overflow-y: auto; /* Enable scrolling for the modal content if it overflows */
+}
+
+.modal-title {
+    margin-bottom: 30px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #060644;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f5842c;
+    box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.error-message-box {
+    background-color: #ffe8e8;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: -10px;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    text-align: center;
+    padding: 30px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #66bb6a;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.success-message h4 {
+    color: #2e7d32;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.close-modal-button {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.close-modal-button:hover {
+    background-color: #5a6268;
+}
+
+/* Two-column layout for State and City fields */
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group-row .form-group {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Customizing the react-select component */
+.react-select__control {
+    border-color: #ddd !important;
+    box-shadow: none !important;
+    min-height: 48px;
+    border-radius: 5px;
+}
+
+.react-select__control--is-focused {
+    border-color: #f1c40f !important;
+    box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.3) !important;
+}
+
+.react-select__placeholder {
+    color: #999;
+}
+
+/* This is the key fix for the dropdown height issue */
+.react-select__menu {
+    /* Set a higher z-index than the modal (1000) to ensure it's visible */
+    z-index: 1001 !important; 
+    /* Ensures the dropdown list is not cut off by a parent container's overflow */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content .summit-title {
+        font-size: 3rem;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 2rem;
+    }
+
+    .hero-content .event-details {
+        gap: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content .summit-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 1.8rem;
+    }
+
+    .hero-content .event-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section, .brands-section, .cta-section, .modal-content {
+        padding: 30px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content .franmax-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-content .summit-title {
+        font-size: 2rem;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 1.5rem;
+    }
+
+    .hero-content .event-details {
+        font-size: 0.9rem;
+    }
+
+    .register-button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .modal-content {
+        padding: 25px;
+    }
+}

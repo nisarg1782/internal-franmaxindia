@@ -1,0 +1,37 @@
+.denied-page-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.denied-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.denied-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.denied-icon {
+  font-size: 60px;
+  color: #d9534f;
+  margin-bottom: 20px;
+}
+
+.denied-box h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.denied-box p {
+  font-size: 16px;
+  color: #666;
+}

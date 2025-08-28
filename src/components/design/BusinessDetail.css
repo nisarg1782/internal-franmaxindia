@@ -1,0 +1,140 @@
+.business-detail {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.business-info {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.business-image {
+  flex: 1 1 40%;
+  max-width: 500px;
+}
+
+.business-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.business-details {
+  flex: 1 1 60%;
+  padding: 30px;
+}
+
+.business-details h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.business-details p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.business-details .description {
+  color: #555;
+  line-height: 1.6;
+}
+
+.enquire-now-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquire-now-btn:hover {
+  background-color: #0056b3;
+}
+
+.business-quote-section {
+  margin-top: 40px;
+  background-color: #060644;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 6px solid white;
+}
+
+.business-quote-section h3 {
+  font-size: 22px;
+  color: #f5842c;
+  margin-bottom: 15px;
+}
+
+.business-quote-section .quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #f5842c;
+  margin-bottom: 20px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
+.business-image {
+  flex: 1 1 30%;
+  max-width: 300px;
+  padding: 20px;
+}
+
+.business-image img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .business-info {
+    flex-direction: column;
+  }
+
+  .business-details {
+    padding: 20px;
+  }
+
+  .business-details h2 {
+    font-size: 24px;
+  }
+
+  .enquire-now-btn {
+    width: 100%;
+  }
+
+  .business-quote-section {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,73 @@
+.snb-marketing-page {
+  display: flex;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.snb-marketing-content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+.snb-marketing-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #060644;
+}
+
+.snb-marketing-table-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.snb-marketing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.snb-marketing-table th,
+.snb-marketing-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.snb-marketing-table th {
+  background-color: #f3f4f6;
+  color: #555;
+}
+
+.snb-show-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.snb-show-btn:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .snb-marketing-content {
+    padding: 15px;
+  }
+
+  .snb-marketing-table th,
+  .snb-marketing-table td {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+
+  .snb-marketing-title {
+    font-size: 1.5rem;
+  }
+}

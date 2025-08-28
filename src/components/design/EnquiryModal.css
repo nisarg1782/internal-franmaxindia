@@ -1,0 +1,87 @@
+.enquiry-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.enquiry-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.enquiry-modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #060644;
+}
+
+.enquiry-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquiry-modal input,
+.enquiry-modal select,
+.enquiry-modal textarea {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.enquiry-modal textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-btn {
+  background: #f97316;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: none;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #888;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group .select__control {
+  width: 100%;
+  padding-left: 36px !important;
+  padding: 10px;
+  box-sizing: border-box;
+}

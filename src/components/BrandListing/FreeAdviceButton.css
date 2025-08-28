@@ -1,0 +1,127 @@
+/* ======== Free Advice Fixed Vertical Button ======== */
+.free-advice-fixed-btn {
+  position: fixed;
+  top: 50%;                                      /* Vertically centered */
+  right: 0;                                      /* Stick to right edge */
+  transform: translateY(-50%) rotate(-90deg);    /* Center & rotate text */
+  transform-origin: right top;
+  background-color: #d90000;
+  color: white;
+  font-weight: 700;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  z-index: 9999;                                 /* Ensure it's on top */
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.free-advice-fixed-btn:hover {
+  background-color: #b30000;
+}
+
+/* ======== Modal Overlay ======== */
+.advice-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9998;                                 /* Just below modal */
+  animation: fadeIn 0.3s ease;
+}
+
+/* ======== Slide-in Modal Panel ======== */
+.advice-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 340px;
+  max-height: 90vh;
+  padding: 20px 16px;
+  margin: auto 0;
+  position: relative;
+  animation: slideInRight 0.4s ease;
+  overflow-y: auto;
+  border-radius: 8px 0 0 8px;
+  z-index: 9999;
+}
+
+/* ======== Close Button ======== */
+.advice-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #d90000;
+  cursor: pointer;
+}
+
+/* ======== Headings ======== */
+.advice-modal h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.advice-modal p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ======== Form Fields ======== */
+.advice-form input,
+.advice-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ======== Submit Button ======== */
+.advice-form button {
+  width: 100%;
+  padding: 10px;
+  background: #d90000;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.advice-form button:hover {
+  background: #b30000;
+}
+
+/* ======== Animations ======== */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

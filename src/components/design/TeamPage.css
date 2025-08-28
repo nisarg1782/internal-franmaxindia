@@ -1,0 +1,79 @@
+.team-split-section {
+  padding: 60px 20px;
+  background: #f6f8fc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.team-split-heading {
+  text-align: center;
+  font-size: 32px;
+  color: #060644;
+  margin-bottom: 50px;
+}
+
+.team-split-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.team-split-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.team-split-img {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.team-split-content {
+  flex: 1;
+  padding: 20px 30px;
+}
+
+.team-split-content h3 {
+  font-size: 24px;
+  color: #060644;
+  margin-bottom: 8px;
+}
+
+.team-split-content .role {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.team-split-content .desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.team-split-content .social a {
+  margin-right: 15px;
+  font-size: 18px;
+  color: white;
+  background: #060644;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.team-split-content .social a:hover {
+  background: #ff7a00;
+}
+
+@media (max-width: 768px) {
+  .team-split-row,
+  .team-split-row.reverse {
+    flex-direction: column;
+  }
+
+  .team-split-img {
+    margin-bottom: 20px;
+  }
+}

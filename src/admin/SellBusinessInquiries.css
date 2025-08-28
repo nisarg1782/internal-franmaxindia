@@ -1,0 +1,91 @@
+/* File: src/components/buyProperty.css */
+
+/* General page layout */
+.snb-buyprop-page {
+    display: flex;
+}
+
+.snb-buyprop-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.snb-buyprop-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Table styles */
+.snb-buyprop-table-wrapper {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.snb-buyprop-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.snb-buyprop-table thead tr {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.snb-buyprop-table th,
+.snb-buyprop-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.snb-buyprop-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.snb-buyprop-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Overview row styles */
+.snb-overview-row {
+    cursor: pointer;
+}
+
+/* Details button style */
+.snb-details-toggle button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.snb-details-toggle button:hover {
+    background-color: #218838;
+}
+
+/* Detailed row styles */
+.snb-detailed-row {
+    background-color: #e9ecef;
+}
+
+.snb-details-content {
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+.snb-details-content p {
+    margin: 0.5rem 0;
+}
+
+.snb-details-content strong {
+    color: #555;
+}
